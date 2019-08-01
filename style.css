@@ -1,0 +1,368 @@
+:root {
+  --primary-color: #a4102f;
+  --light-color: #fff;
+  --dark-color: #333;
+  --max-width: 80vw;
+  --shadow: 2px 2px 2px gray;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: "Mandali", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+.red {
+  color: var(--primary-color);
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+/* header */
+.main-header {
+  height: 100px;
+  width: 100vw;
+  background: var(--light-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.main-header .container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.utility {
+  text-align: end;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.utility a {
+  padding-right: 30px;
+}
+.logo {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  display: block;
+  width: 60%;
+  height: 60%;
+  background: var(--primary-color);
+}
+.nav-menu {
+  list-style: none;
+  display: flex;
+  position: relative;
+  padding-top: 20px;
+}
+.list-title {
+  font-size: 16px;
+}
+.nav-menu-list1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.nav-menu-list2 {
+  position: absolute;
+  top: 0;
+  left: 15vw;
+}
+.nav-menu-list3 {
+  position: absolute;
+  top: 0;
+  left: 30vw;
+}
+.dropdown-menu {
+  display: none;
+}
+
+.nav-menu-tools {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+}
+.nav-menu-tools i {
+  padding-right: 40px;
+}
+.btn-red {
+  display: inline-block;
+  background: var(--primary-color);
+  padding: 0 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: white;
+}
+.nav-menu-list1:hover .dropdown-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+  padding: 40px 15vw;
+  position: relative;
+  left: -30vw;
+  z-index: 2;
+  background: var(--light-color);
+  width: 100vw;
+}
+
+.nav-menu-list2:hover .dropdown-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+  position: relative;
+  left: -45vw;
+  padding: 40px 15vw;
+  z-index: 2;
+  background: var(--light-color);
+  width: 100vw;
+}
+.nav-menu-list3:hover .dropdown-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+  position: relative;
+  left: -60vw;
+  padding: 40px 15vw;
+  z-index: 2;
+  background: var(--light-color);
+  width: 100vw;
+}
+.dropdown-menu-list ul {
+  font-size: 16px;
+  list-style: none;
+  padding-left: 0;
+  color: gray;
+}
+.dropdown-menu-list img {
+  width: 100%;
+  height: 100%;
+}
+.dropdown-menu-list .text-wrap {
+  border: 1px solid rgb(214, 213, 213);
+  text-align: center;
+  padding: 20px;
+  height: 60%;
+  font-size: 12px;
+  box-shadow: var(--shadow);
+}
+.btn-1 {
+  display: inline-block;
+  padding: 0 20px;
+  border: 1px solid rgb(214, 213, 213);
+  margin-top: 20px;
+}
+
+.mobile-menu {
+  display: none;
+}
+/* Showcase */
+.showcase {
+  position: relative;
+  top: 98px;
+}
+.showcase-video {
+  height: 500px;
+  width: 100%;
+}
+
+.showcase-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.showcase-header {
+  position: absolute;
+  top: 140px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.showcase-header h1 {
+  font-family: Verner, serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: white;
+}
+.ontdek-meer {
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+  padding: 0 20px;
+  border: 1px solid white;
+  margin-top: 40px;
+  font-weight: 400;
+}
+.opentijd {
+  position: absolute;
+  top: 0;
+  right: 10vw;
+  background: var(--light-color);
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 0 0 40px 40px;
+}
+.opentijd a {
+  text-decoration: underline;
+}
+
+/* Info */
+.info {
+  position: relative;
+  z-index: 2;
+}
+.ticket {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ticket-wrap {
+  background: var(--light-color);
+  position: relative;
+  top: -2px;
+  width: 80vw;
+  height: 130px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-content: center;
+  align-items: center;
+  justify-items: start;
+  border: 1px solid rgb(224, 224, 224);
+  padding-left: 20px;
+}
+
+.slapen {
+  position: absolute;
+  top: 0;
+  left: 120px;
+}
+.slapen-wrap {
+  display: none;
+}
+.slapen:hover .slapen-wrap {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: stretch;
+  grid-column-gap: 20px;
+  position: relative;
+  left: -120px;
+  top: -2px;
+  background: var(--light-color);
+  width: 80vw;
+  height: 130px;
+  border: 1px solid rgb(224, 224, 224);
+  padding-left: 30px;
+}
+.slapen:hover input {
+  padding: 10px 20px;
+  background: #ddd;
+  font-size: 16px;
+}
+.slapen:hover button {
+  padding: 10px 20px;
+  justify-self: start;
+}
+.slapen:hover .list-title {
+  color: var(--primary-color);
+}
+.voorpret {
+  position: absolute;
+  top: 0;
+  left: 269px;
+}
+.voorpret-wrap {
+  display: none;
+}
+.voorpret:hover .voorpret-wrap {
+  position: relative;
+  top: -2px;
+  left: -269px;
+  background: var(--light-color);
+  width: 80vw;
+  height: 130px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-content: center;
+  align-items: center;
+  justify-items: start;
+  border: 1px solid rgb(224, 224, 224);
+  padding-left: 20px;
+}
+.voorpret:hover .list-title {
+  color: var(--primary-color);
+}
+.info .list-title {
+  background: #ddd;
+  padding: 0 30px;
+}
+.ticket .list-title {
+  background: var(--light-color);
+}
+@media (max-width: 768px) {
+  /* nav */
+  .nav-wrap {
+    display: none;
+  }
+  .main-header .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .mobile-menu {
+    display: block;
+    color: black;
+    font-size: 22px;
+  }
+  .mobile-menu i {
+    padding: 0 3px;
+  }
+  /* showcase */
+  .opentijd {
+    display: none;
+  }
+  .showcase-header h1 {
+    font-size: 40px;
+  }
+  /* info */
+  .ticket-wrap,
+  .slapen-wrap,
+  .voorpret-wrap {
+    display: none;
+  }
+  .info {
+    top: 50px;
+  }
+  .ticket,
+  .slapen,
+  .voorpret {
+    position: static;
+  }
+  .info .list-title {
+    display: block;
+    background: var(--light-color);
+    border: 1px solid rgb(224, 221, 221);
+    padding: 5px 30px;
+    color: var(--primary-color);
+  }
+  .info .list-title::after {
+    content: "›";
+    font-size: 24px;
+    vertical-align: -3px;
+    padding-left: 140px;
+  }
+}
