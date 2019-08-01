@@ -181,6 +181,7 @@ a {
 }
 /* Showcase */
 .showcase {
+  background: black;
   position: relative;
   top: 98px;
 }
