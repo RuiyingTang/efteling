@@ -147,7 +147,7 @@
                     Korte wachtrijen? Krijg een wachtrij-update tijdens je
                     bezoek!
                   </p>
-                  <p class="btn-1"><a href="#">App met ons</a></p>
+                  <a class="btn-1" href="#">App met ons</a>
                 </div>
               </div>
             </div>
@@ -197,14 +197,15 @@
                     Een overnachting is altijd inclusief onbeperkt toegang tot
                     het Park!
                   </p>
-                  <p class="btn-1"><a href="#">Boek nu</a></p>
+                  <a class="btn-1" href="#">Boek nu</a>
                 </div>
               </div>
             </div>
           </li>
           <li class="nav-menu-tools">
-            <i class="fas fa-search"></i><i class="fas fa-shopping-basket"></i
-            ><a class="btn-red" href="#">Tickets</a>
+            <i class="fas fa-search"></i><i class="fas fa-shopping-basket"></i>
+            <a class="btn-red" href="#"><span> Tickets</span></a>
+            >
           </li>
         </ul>
         <!-- <nav class="mobile-menu"></nav> -->
@@ -236,69 +237,94 @@
       <a href="#"><p>Bekijk alle openingstijd</p></a>
     </div>
   </section>
-  <section class="info container">
-    <!-- <div class="container"> -->
-    <div class="ticket">
-      <h3><span class="list-title">Tickets</span></h3>
-      <div class="ticket-wrap">
+
+  <section class="info-box container">
+    <ul>
+      <li><a href="#" class="active">Tickets</a></li>
+      <li><a href="#">Blijf slapen</a></li>
+      <li><a href="#">Heb je al tickets?</a></li>
+    </ul>
+    <div class="panels">
+      <article class="active-panel">
         <div>
           <h2 class="red">
             Bezoek de Efteling. Koop je tickets online met korting!
           </h2>
-          <p>Kinderen t/m 3jaar gratis</p>
+          <p class="p-1">Kinderen t/m 3jaar gratis</p>
         </div>
-        <a class="btn-red" href="#">Bekijk prijzen</a>
-      </div>
-    </div>
-    <div class="slapen">
-      <h3><span class="list-title">Blijf slapen</span></h3>
-      <form class="slapen-wrap">
-        <input
-          type="text"
-          list="number"
-          id="person-number"
-          name="person-number"
-          value="4 personen"
-        />
-        <datalist id="number">
-          <option value="3 personen"></option>
-          <option value="2 personen"></option>
-          <option value="1 personen"></option>
-        </datalist>
-        <input
-          type="text"
-          list="accommodatie-type"
-          id="accommodatie"
-          name="accommodatie"
-          value="alle accommodatie"
-        />
-        <datalist id="accommodatie-type">
-          <option value="alle accommodatie"></option>
-          <option value="hotelkamer"></option>
-          <option value="vakantiewoning"></option>
-        </datalist>
-        <input
-          type="date"
-          id="start"
-          name="stay-start"
-          value="Aankomst"
-        /><input type="date" id="end" name="stay-end" value="Vertrek" />
-        <button class="btn-red">Zoeken</button>
-      </form>
-    </div>
-    <div class="voorpret">
-      <h3><span class="list-title">Heb je al tickets</span></h3>
-      <div class="voorpret-wrap">
+        <a class="btn-red" href="#"><span> Bekijk prijzen</span></a>
+      </article>
+      <article>
+        <form class="slapen-wrap">
+          <input
+            type="text"
+            list="number"
+            id="person-number"
+            name="person-number"
+            value="4 personen"
+          />
+          <datalist id="number">
+            <option value="3 personen"></option>
+            <option value="2 personen"></option>
+            <option value="1 personen"></option>
+          </datalist>
+          <input
+            type="text"
+            list="accommodatie-type"
+            id="accommodatie"
+            name="accommodatie"
+            value="alle accommodatie"
+          />
+          <datalist id="accommodatie-type">
+            <option value="alle accommodatie"></option>
+            <option value="hotelkamer"></option>
+            <option value="vakantiewoning"></option>
+          </datalist>
+          <input
+            type="date"
+            id="start"
+            name="stay-start"
+            value="Aankomst"
+          /><input type="date" id="end" name="stay-end" value="Vertrek" />
+          <button class="btn-red"><span> Zoeken</span></button>
+        </form>
+      </article>
+      <article>
         <div>
           <h2 class="red">Laat de voorpret beginnen</h2>
-          <p>
+          <p class="p-1">
             Maak gratis een persoonlijke video en krijg tips van
             Efteling-kenners
           </p>
         </div>
-        <a class="btn-red" href="#">Maak je video</a>
-      </div>
+        <a class="btn-red" href="#"><span> Maak je video</span></a>
+      </article>
     </div>
-    <!-- </div> -->
   </section>
+
+  <script>
+    var tabs = document.querySelectorAll(".info-box li a");
+    var panels = document.querySelectorAll(".info-box article");
+
+    for (i = 0; i < tabs.length; i++) {
+      var tab = tabs[i];
+      setTabHandler(tab, i);
+    }
+
+    function setTabHandler(tab, tabPos) {
+      tab.onclick = function() {
+        for (i = 0; i < tabs.length; i++) {
+          tabs[i].className = "";
+        }
+
+        tab.className = "active";
+
+        for (i = 0; i < panels.length; i++) {
+          panels[i].className = "";
+        }
+
+        panels[tabPos].className = "active-panel";
+      };
+    }
+  </script>
 </html>
