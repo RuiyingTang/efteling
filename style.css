@@ -334,31 +334,29 @@ h2 {
   .showcase-header h1 {
     font-size: 40px;
   }
+
   /* info */
-  .ticket-wrap,
-  .slapen-wrap,
-  .voorpret-wrap {
+  .panels {
     display: none;
   }
-  .info {
+
+  .info-box {
+    position: relative;
     top: 50px;
   }
-  .ticket,
-  .slapen,
-  .voorpret {
-    position: static;
+  .info-box li {
+    float: none;
   }
-  .info .list-title {
-    display: block;
-    background: var(--light-color);
-    border: 1px solid rgb(224, 221, 221);
-    padding: 5px 30px;
+  .info-box li a {
     color: var(--primary-color);
+    width: 100%;
+    text-align: start;
+    border-radius: 0;
   }
-  .info .list-title::after {
+  .info-box li a::after {
     content: "›";
     font-size: 24px;
     vertical-align: -3px;
-    padding-left: 140px;
+    padding-left: 100px;
   }
 }
