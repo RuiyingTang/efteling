@@ -303,6 +303,40 @@ h2 {
   justify-self: start;
   font-size: 16px;
 }
+
+/* Park */
+.park {
+  height: 500px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-top: 40px;
+}
+.card-img {
+  height: 50%;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-text {
+  padding: 10px 20px;
+  line-height: 1.5;
+}
+.card-text h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.btn-2 {
+  display: block;
+  color: var(--primary-color);
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
   /* nav */
   .nav-wrap {
@@ -358,5 +392,9 @@ h2 {
     font-size: 24px;
     vertical-align: -3px;
     padding-left: 100px;
+  }
+  /* Park */
+  .park {
+    grid-template-columns: 1fr;
   }
 }
