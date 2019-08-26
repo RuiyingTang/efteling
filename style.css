@@ -202,7 +202,7 @@ h2 {
   font-size: 60px;
   color: white;
 }
-.ontdek-meer {
+.btn {
   display: inline-block;
   font-size: 16px;
   color: white;
@@ -335,6 +335,48 @@ h2 {
   margin-top: 20px;
   text-align: center;
   font-weight: 700;
+}
+
+/* zomer */
+.zomer {
+  width: 100vw;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.zomer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://www.efteling.com/nl/-/media/images/nieuw-park/park/attractions/pirana/1600x550-zomer-pirana-kinderen.jpg?h=550&w=1600&focuspoint=0.13%2c-0.04&hash=2C8BA4CFEC37BA1A0AB31646879990BD)
+    no-repeat center center/cover;
+  z-index: -1;
+}
+
+.zomer-text {
+  grid-column: 2/3;
+  color: white;
+  font-weight: 900;
+  padding: 30px;
+  text-align: center;
+  padding-right: 10vw;
+}
+.zomer-text hr {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+}
+.zomer-text h2 {
+  font-size: 40px;
 }
 
 @media (max-width: 768px) {
